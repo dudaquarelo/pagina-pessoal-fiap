@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #155E75;
+    --secondary: #A3E635;
+    --background: #ECFEFF;
+    --text: #083344;
+    --accent: #F43F5E;
+    --radius: 12px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: white;
+}
+
+div img {
+    border-radius: 50%;
+}
+
+nav {
+    background-color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+    padding: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--primary), #0f4c5c);
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    margin-bottom: 20px;
+}
+
+header a {
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: var(--radius);
+    font-weight: bold;
+    display: inline-block;
+}
+
+header a:first-of-type {
+    background-color: var(--secondary);
+    color: var(--text);
+}
+
+header a:last-of-type {
+    border: 2px solid white;
+    color: white;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h2 {
+    margin-bottom: 15px;
+    border-left: 5px solid var(--accent);
+    padding-left: 10px;
+}
+
+#sobre {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#sobre img {
+    border-radius: var(--radius);
+}
+
+#objetivo {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 20px;
+}
+
+#habilidades {
+    margin-bottom: 20px;
+}
+
+article {
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+article h3 {
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+article ul {
+    padding-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--primary);
+    color: white;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#experiencia,
+#projetos {
+    background-color: white;
+    border-radius: var(--radius);
+    padding: 20px;
+}
+
+#contato ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#contato a {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: var(--radius);
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary);
+    color: white;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    #sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
