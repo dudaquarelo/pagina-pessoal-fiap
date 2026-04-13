@@ -1,125 +1,161 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Pessoal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
+ 
 <body>
-    <div>
-        <img src="https://ui-avatars.com/api/?background=155E75&color=083344&name=dudaquarelo" alt="UserPhoto" title="UserPhoto">
-        <p>Portfólio</p>
-    </div>
-
+ 
     <nav>
+        <div class="nav-brand">
+            <img src="https://ui-avatars.com/api/?background=155E75&color=083344&name=dudaquarelo" alt="UserPhoto" title="UserPhoto">
+            <span>Portfólio</span>
+        </div>
         <ul>
-            <li><a href="#sobre">Sobre mim</a></li>
+            <li><a href="#sobre">Sobre Mim</a></li>
             <li><a href="#objetivo">Objetivo Profissional</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#formação">Formação</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
     </nav>
-
+ 
     <header>
         <h1>Maria Eduarda Cavallari Quarelo</h1>
         <p>Estudante da turma 1TDSR - Análise e Desenvolvimento de Sistemas FIAP</p>
-        <a href="#sobre">Conheça mais</a>
-        <a href="#contato">Contato</a>
+        <div class="header-btns">
+            <a href="#sobre">Conheça Mais</a>
+            <a href="#contato">Contato</a>
+        </div>
     </header>
-
+ 
     <section id="sobre">
         <h2>Sobre Mim</h2>
-        <p>Olá, sou uma estudante nova na área, mas muito dedicada a aprender o máximo que puder. </p>
-        <img src="img/FotoPessoal.jpeg" width="200px">
+        <div class="sobre-content">
+            <p>Olá, sou uma estudante nova na área, mas muito dedicada a aprender o máximo que puder.</p>
+            <img src="img/FotoPessoal.jpeg" alt="Foto Pessoal" width="150">
+        </div>
     </section>
-
+ 
     <section id="objetivo">
-        <h2>Objetivo Profissional</h2>
-        <p>Busco atuar como desenvolvedora, aplicando meus conhecimentos em tecnologia e colaborando para o crescimento da empresa.</p>
+        <div class="card">
+            <h2>Objetivo Profissional</h2>
+            <p>Busco atuar como desenvolvedora, aplicando meus conhecimentos em tecnologia e colaborando para o crescimento da empresa.</p>
+        </div>
     </section>
-
+ 
     <section id="habilidades">
         <h2>Habilidades</h2>
-
+        <div class="habilidades-grid">
+            <article>
+                <h3>Hard Skills</h3>
+                <ul>
+                    <li>Artificial Intelligence and Chatbot</li>
+                    <li>Building Relational Database</li>
+                    <li>Computational Thinking using Python</li>
+                    <li>Domain Driven Design using Java</li>
+                    <li>Front-End Design Engineering</li>
+                    <li>Software Engineering and Business Model</li>
+                    <li>Git and Github</li>
+                </ul>
+            </article>
+ 
+            <article>
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Trabalho em Equipe</li>
+                    <li>Comunicação Efetiva</li>
+                    <li>Pontualidade</li>
+                    <li>Resolução de Problemas</li>
+                    <li>Organização</li>
+                    <li>Adaptabilidade</li>
+                    <li>Apresentação e Oratória</li>
+                </ul>
+            </article>
+        </div>
     </section>
-    <article>
-        <h3>Hard Skills</h3>
-        <ul>
-            <li>Artificial Intelligence and Chatbot</li>
-            <li>Building Relational Database</li>
-            <li>Computational Thinking using Python</li>
-            <li>Domain Driven Design using Java</li>
-            <li>Front-End Design Engineering</li>
-            <li>Software Engineering and Business Model</li>
-            <li>Git and Github</li>
-        </ul>
-    </article>
-
-    <article>
-        <h3>Soft Skills</h3>
-        <ul>
-            <li>Trabalho em Equipe</li>
-            <li>Comunicação Efetiva</li>
-            <li>Pontualidade</li>
-            <li>Resolução de Problemas</li>
-            <li>Organização</li>
-            <li>Adaptabilidade</li>
-            <li>Apresentação e Oratória</li>
-        </ul>
-    </article>
-
-    <section id="formação">
+ 
+    <section id="formacao">
         <h2>Formação</h2>
-
-        <table border="1">
-            <tr>
-                <th>Período</th>
-                <th>Curso</th>
-                <th>Instituição</th>
-            </tr>
-            <tr>
-                <td>2026-Atual</td>
-                <td>Tecnólogo em Análise e Desenvolvimento de Sistemas</td>
-                <td>FIAP</td>
-            </tr>
+        <table>
+            <thead>
+                <tr>
+                    <th>Período</th>
+                    <th>Curso</th>
+                    <th>Instituição</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2026 - Atual</td>
+                    <td>Tecnólogo em Análise e Desenvolvimento de Sistemas</td>
+                    <td>FIAP</td>
+                    <td>Cursando disciplinas de programação, banco de dados e desenvolvimento web.</td>
+                </tr>
+            </tbody>
         </table>
     </section>
-
+ 
     <section id="experiencia">
         <h2>Experiência</h2>
-
-        <p>Sem experiência na área por enquanto...</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Período</th>
+                    <th>Cargo</th>
+                    <th>Empresa</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="4">Sem experiência na área por enquanto...</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
-
+ 
     <section id="projetos">
         <h2>Projetos</h2>
-
-        <p>Em breve...</p>
+        <div class="projetos-grid">
+            <div class="projeto-card">
+                <h3>Em breve...</h3>
+                <p>Projetos serão adicionados em breve.</p>
+            </div>
+        </div>
     </section>
-
+ 
     <section id="contato">
         <h2>Contato</h2>
-        <p>Em breve</p>
-
-        <h3>E-mail</h3>
-        <p>duda.quarelo@gmail.com</p>
-
-        <h3>Redes Sociais</h3>
-        <ul>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Linkedin</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ul>
+        <div class="contato-grid">
+            <div class="contato-col">
+                <p><strong>Formulário de contato - Em Breve</strong></p>
+            </div>
+            <div class="contato-col">
+                <h3>E-mail</h3>
+                <p>duda.quarelo@gmail.com</p>
+ 
+                <h3>Redes Sociais</h3>
+                <ul class="redes-list">
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
     </section>
-
+ 
     <footer>
         <p>© 2026 Maria Eduarda Cavallari Quarelo - Todos os direitos reservados</p>
         <p>Desenvolvido com dedicação e café ☕</p>
     </footer>
-
+ 
 </body>
 </html>
