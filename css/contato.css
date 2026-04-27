@@ -1,0 +1,115 @@
+#contato {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+ 
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 24px;
+}
+ 
+.contato-col h3 {
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-top: 16px;
+    margin-bottom: 6px;
+}
+ 
+.contato-col h3:first-child {
+    margin-top: 0;
+}
+ 
+.contato-col p {
+    font-size: var(--font-size-sm);
+}
+ 
+.redes-list {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+ 
+.redes-list a {
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: bold;
+}
+ 
+.redes-list a:hover {
+    opacity: 0.85;
+}
+ 
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+ 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+ 
+.form-group label {
+    font-size: var(--font-size-sm);
+    font-weight: bold;
+    color: var(--text);
+}
+ 
+.obrigatorio {
+    color: var(--accent);
+}
+ 
+.form-group input,
+.form-group textarea {
+    padding: 8px 12px;
+    border: 1px solid var(--input-border);
+    border-radius: var(--radius);
+    font-size: var(--font-size-sm);
+    font-family: var(--font-base);
+    color: var(--text);
+    background-color: var(--white);
+    transition: border-color var(--transition);
+    resize: vertical;
+}
+ 
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+ 
+.btn-enviar {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    border-radius: var(--radius);
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity var(--transition);
+}
+ 
+.btn-enviar:hover {
+    opacity: 0.88;
+}
+
+
+@media (max-width: 768px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+}

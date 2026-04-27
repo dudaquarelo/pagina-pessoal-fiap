@@ -1,0 +1,33 @@
+:root {
+    --primary: #155E75;
+    --primary-dark: #0f4c5c;
+    --secondary: #A3E635;
+    --background: #ECFEFF;
+    --text: #083344;
+    --accent: #F43F5E;
+    --orange: #F97316;
+ 
+    --white: #ffffff;
+    --border: #e5e7eb;
+    --muted: #555555;
+    --input-border: #d1d5db;
+ 
+    --font-base: Arial, Helvetica, sans-serif;
+    --font-size-base: 14px;
+    --font-size-sm: 13px;
+    --font-size-xs: 12px;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.3rem;
+    --font-size-h3: 0.95rem;
+    --line-height: 1.6;
+ 
+    --radius: 8px;
+    --radius-sm: 4px;
+    --spacing-section: 40px 20px;
+    --max-width: 900px;
+    --nav-padding: 8px 20px;
+ 
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.06);
+ 
+    --transition: 0.2s;
+}

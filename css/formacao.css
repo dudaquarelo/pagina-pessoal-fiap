@@ -1,0 +1,41 @@
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-card);
+}
+ 
+table {
+    width: 100%;
+    min-width: 520px;
+    border-collapse: collapse;
+    background-color: var(--white);
+    font-size: var(--font-size-sm);
+}
+ 
+thead tr {
+    background-color: var(--primary);
+    color: var(--white);
+}
+ 
+th {
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: bold;
+    white-space: nowrap;
+}
+ 
+td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+}
+ 
+tbody tr:last-child td {
+    border-bottom: none;
+}
+ 
+#experiencia {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
