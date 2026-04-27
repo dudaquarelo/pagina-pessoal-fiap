@@ -1,0 +1,13 @@
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary);
+    color: var(--white);
+    margin-top: 40px;
+    font-size: var(--font-size-sm);
+}
+ 
+footer p + p {
+    margin-top: 4px;
+    opacity: 0.85;
+}

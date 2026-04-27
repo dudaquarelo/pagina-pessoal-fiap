@@ -1,0 +1,21 @@
+#sobre .sobre-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+ 
+#sobre img {
+    border-radius: var(--radius);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+ 
+@media (max-width: 768px) {
+    #sobre .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
