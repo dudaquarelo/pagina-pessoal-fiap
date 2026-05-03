@@ -68,18 +68,3 @@ nav a {
 nav a:hover {
     color: var(--secondary);
 }
- 
-
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-    }
- 
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-}
