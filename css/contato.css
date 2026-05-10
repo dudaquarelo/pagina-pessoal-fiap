@@ -107,9 +107,24 @@
     opacity: 0.88;
 }
 
-
 @media (max-width: 768px) {
     .contato-grid {
         grid-template-columns: 1fr;
     }
+}
+
+.erro-msg {
+    color: var(--accent);
+    font-size: var(--font-size-xs);
+}
+
+.sucesso-msg {
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: var(--radius);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
