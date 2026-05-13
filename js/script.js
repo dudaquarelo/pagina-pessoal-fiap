@@ -151,7 +151,7 @@ styles.textContent = `
     nav ul {
       width: 100%;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
       gap: 0 !important;
       max-height: 0;
       overflow: hidden;
@@ -232,3 +232,82 @@ styles.textContent = `
 `;
  
 document.head.appendChild(styles);
+
+const form = document.querySelector('.contato-form');
+
+if (form) {
+  const nomeInput = document.getElementById('nome');
+  const emailInput = document.getElementById('email');
+  const mensagemInput = document.getElementById('mensagem');
+
+  function mostrarErro(input, mensagem) {
+    const grupo = input.closest('.form-group');
+    let erro = grupo.querySelector('.erro-msg');
+    if (!erro) {
+      erro = document.createElement('span');
+      erro.classList.add('erro-msg');
+      grupo.appendChild(erro);
+    }
+    erro.textContent = '⚠ ' + mensagem;
+    input.style.borderColor = 'var(--accent)';
+    input.style.backgroundColor = '#fff0f0';
+  }
+
+  function limparErro(input) {
+    const grupo = input.closest('.form-group');
+    const erro = grupo.querySelector('.erro-msg');
+    if (erro) erro.remove();
+    input.style.borderColor = '';
+    input.style.backgroundColor = '';
+  }
+
+  function validar() {
+    let valido = true;
+
+    const nome = nomeInput.value.trim();
+    if (nome.length < 3 || !/^[a-zA-ZÀ-ÿ\s]+$/.test(nome)) {
+      mostrarErro(nomeInput, 'Nome deve ter pelo menos 3 caracteres e conter apenas letras');
+      valido = false;
+    } else {
+      limparErro(nomeInput);
+    }
+
+    const email = emailInput.value.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      mostrarErro(emailInput, 'Digite um e-mail válido (exemplo@dominio.com)');
+      valido = false;
+    } else {
+      limparErro(emailInput);
+    }
+
+    const mensagem = mensagemInput.value.trim();
+    if (mensagem.length < 10) {
+      mostrarErro(mensagemInput, 'Mensagem deve ter pelo menos 10 caracteres');
+      valido = false;
+    } else {
+      limparErro(mensagemInput);
+    }
+
+    return valido;
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (!validar()) return;
+
+    console.log('Dados do formulário:', {
+      nome: nomeInput.value.trim(),
+      email: emailInput.value.trim(),
+      mensagem: mensagemInput.value.trim()
+    });
+
+    const contatoCol = form.closest('.contato-col');
+    contatoCol.innerHTML = `
+      <div class="sucesso-msg">
+        <p><strong>✓ Mensagem enviada com sucesso!</strong></p>
+        <p>Obrigado por entrar em contato, ${nomeInput.value.trim().split(' ')[0]}! Retornarei em breve.</p>
+      </div>
+    `;
+  });
+}
