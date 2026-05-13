@@ -39,38 +39,49 @@ document.addEventListener('click', (e) => {
  
  
 const habilidadesGrid = document.querySelector('.habilidades-grid');
- 
+
 if (habilidadesGrid) {
   const articles = habilidadesGrid.querySelectorAll('article');
- 
+
   articles.forEach((article) => {
     const title = article.querySelector('h3');
     const content = article.querySelector('ul');
- 
+
     content.classList.add('accordion-content');
- 
+
     title.classList.add('accordion-title');
     title.setAttribute('role', 'button');
     title.setAttribute('tabindex', '0');
     title.setAttribute('aria-expanded', 'false');
- 
+
     const icon = document.createElement('span');
     icon.classList.add('accordion-icon');
     icon.textContent = '▾';
     title.appendChild(icon);
- 
+
     content.style.maxHeight = '0';
     content.style.overflow = 'hidden';
     content.style.transition = 'max-height 0.35s ease, opacity 0.35s ease';
     content.style.opacity = '0';
- 
+
     const toggle = () => {
       const isOpen = article.classList.toggle('accordion-open');
       title.setAttribute('aria-expanded', isOpen);
       content.style.maxHeight = isOpen ? content.scrollHeight + 'px' : '0';
       content.style.opacity = isOpen ? '1' : '0';
+
+      articles.forEach((other) => {
+        if (other !== article) {
+          const otherTitle = other.querySelector('h3');
+          const otherContent = other.querySelector('ul');
+          other.classList.remove('accordion-open');
+          otherTitle.setAttribute('aria-expanded', 'false');
+          otherContent.style.maxHeight = '0';
+          otherContent.style.opacity = '0';
+        }
+      });
     };
- 
+
     title.addEventListener('click', toggle);
     title.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
