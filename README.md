@@ -1,7 +1,5 @@
 # pagina-pessoal-fiap
 
-https://dudaquarelo.github.io/pagina-pessoal-fiap/
-
 ## Objetivo do site:
 Entender como projetos reais começam e como a documentação é parte do desenvolvimento.
 
